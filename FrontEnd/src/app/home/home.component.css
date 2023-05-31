@@ -1,0 +1,41 @@
+.bg-image{
+    background-image: url('/assets/background.jpg') ;
+    background-size: cover;
+    height: 100vh;
+    z-index: -1;
+}
+
+.card{
+    margin-top: 100px;
+}
+
+.card-title{
+    font-size: 2rem;
+}
+
+
+
+h1{
+    padding-top: 70px;
+    padding-bottom: 40px;
+    font-family: serif;
+    font-size: 60px;
+    position: relative;
+    
+}
+
+.primary{
+    height: 50px;
+    width:150px;
+    font-size: 110%;
+    font-family: Helvetica ;
+    border: 2px solid blueviolet !important;
+}
+
+table, tr, td{
+   margin-top: 50px;
+    padding: 15px;
+    text-align: center;
+    background-color:aliceblue;
+    border: 2px solid;
+}

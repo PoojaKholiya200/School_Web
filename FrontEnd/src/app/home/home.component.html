@@ -1,0 +1,40 @@
+<app-navbar></app-navbar>
+
+
+
+
+<div class="bg-image">
+    <div class="container text-center">
+        <h1 style="color: white;">WELCOME TO GURUKUL </h1>
+
+        <button mat-raised-button class="primary" routerLink="/login">LogIn</button>
+
+        <table class="table table-bordered">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+            <ng-component *ngFor="let item of data;">
+                <tr>
+                    <td>Rahul</td>
+                    <td>Rahul123@gmail.com</td>
+                </tr>
+            </ng-component>
+            <tr>
+                <td>Poo</td>
+                <td>Poo@gmail.com</td>
+                
+                
+            </tr>
+            <tr>
+                <td>Shubham</td>
+                <td>Shubham@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Shiv</td>
+                <td>Shiv@gmail.com</td>
+            </tr>
+        </table>
+        
+    </div>
+</div>

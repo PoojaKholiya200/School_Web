@@ -1,0 +1,85 @@
+<div class="bootstrap-wrapper">
+<div class="container">
+    <div class="row mt10">
+        <div class="col-md-6 offset-md-3">
+            
+          <!-- <style>
+                body{
+                background-image: url('BackgroundImage.jpg');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+                </style>
+            -->
+                
+            <mat-card class="row mt10" class="row mr10" class="row ml10" class="row mb10">
+
+           <div class="container text-center">
+            <img src="../../../assets/logo.png" alt="" />
+           </div>
+           <h2 class="text-center" >LogIn!! </h2>
+
+          <!-- {{loginData|json}} -->
+            <form (ngSubmit)="formSubmit()">
+                <div class="container text-center">
+         <!--  <form>
+             Username field
+            <mat-form-field class="full-width" appearance="fill">
+                <mat-label>Username</mat-label>
+                <input matInput placeholder="Name" />
+            </mat-form-field>
+            </form> 
+        -->
+          
+            
+            <!--EmailId field-->
+            <mat-form-field class="full-width" appearance="fill">
+                <mat-label>Email Id</mat-label>
+                <input
+                [(ngModel)]="loginData.email"
+                name="email"
+                type="email"
+                required
+                matInput placeholder="E-mail Id" />
+               <!-- <mat-hint>Not exists </mat-hint> -->
+            </mat-form-field>
+                <br>
+
+
+              <!--Password-->
+            <mat-form-field class="full-width" appearance="fill">
+                <mat-label>Password</mat-label>
+                <input 
+                [(ngModel)]="loginData.password"
+                name="password"
+                type="password"
+                required
+                matInput placeholder="Password" />
+                
+              </mat-form-field>
+            <br>
+              
+            <!-- <mat-form-field class="full-width" appearance="fill">
+                <select class="form-select" id="floatingSelect" aria-label="Role" name="role" [(ngModel)]="role" >
+                <option *ngFor="let r of roles" [value]="r">{{r}}</option>
+                </select>
+                <label for="floatingSelect">Role</label>
+                </mat-form-field> -->
+              <div class="container text-center">
+                <button mat-raised-button color="primary" type="submit" mb-40>logIn</button>
+               <!-- <button style="margin-left: 40px" mat-raised-button color="primary">Reset</button> -->
+               <a routerLink="/signup" style="margin-left:20px ; margin-bottom:50px"> </a> 
+
+
+                </div>
+            <!--    <div class="container">
+                    <button mat-raised-button color="primary">Close</button>
+                    </div> -->
+                </div>
+         </form>
+         </mat-card>
+        </div>
+    </div>
+
+</div>
+</div>

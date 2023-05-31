@@ -1,0 +1,120 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="card mt-5" style ="align-items: center;">
+        <h1>DASHBOARD</h1> 
+    </div>
+    <div class="card mt-5" style="padding: 10px;">
+        <form (ngSubmit)="add()">
+
+            <div class="form-group">
+                <label for="name"> Name</label>
+                <input 
+                [(ngModel)]="people.name"
+                type="text"  name="name" id="name" class="form-control" >
+            </div>
+            <div class="form-group">
+                <label for="name"> Contact Number </label>
+                <input 
+                [(ngModel)]="people.contactNumber"
+                type="number"  name="contactNumber" id="contactNumber" class="form-control" >
+            </div>
+            <div class="form-group">
+                <label for="Email"> Email </label>
+                <input 
+                [(ngModel)]="people.email"
+                type="email"  name="email" id="email" class="form-control" >
+            </div>
+            <div class="form-group">
+                <label for="Password"> Password</label>
+                <input 
+                [(ngModel)]="people.password"
+                type="number"  name="password" id="password" class="form-control" >
+            </div>
+            <div class="form-group">
+                <label for="name"> Role</label>
+                <input 
+                [(ngModel)]="people.role" type="text"  name="role" id="role" class="form-control" >
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Add" class="btn btn-primary w-100">
+            </div>
+        </form>
+    </div>
+    <div class="mt-5">
+        <table class="table table-bordered">
+            <thead class="thead">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Phone Number</th>
+                    <th>Role</th>
+                    <th>Edit</th>
+                    
+                </tr>
+            </thead>
+            <tbody class="tbody">
+            <tr *ngFor= "let user of users">
+               
+                    <td>{{user.id }}</td>
+                    <td>{{user.name}}</td>
+                    <td>{{user.contactNumber}}</td> 
+                    <td>{{user.email}}</td>
+                    <td>{{user.password}}</td>
+                    <td>{{user.role}}</td> 
+                    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)= "edit(user)">Edit</button></td>   
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Modal for update-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Update details</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+           <form (ngSubmit)="updateUsers()">
+
+            <div class="form-group">
+                <label for="name"> Name</label>
+                <input 
+                [(ngModel)]="people.name"
+                type="text"  name="name" id="name" class="form-control" >
+            </div>
+            <div class="form-group">
+                <label for="name"> Contact Number </label>
+                <input 
+                [(ngModel)]="people.contactNumber"
+                type="number"  name="contactNumber" id="contactNumber" class="form-control" >
+            </div>
+            <div class="form-group">
+                <label for="Email"> Email </label>
+                <input 
+                [(ngModel)]="people.email"
+                type="email"  name="email" id="email" class="form-control" >
+            </div>
+            <div class="form-group">
+                <label for="Password"> Password</label>
+                <input 
+                [(ngModel)]="people.password"
+                type="number"  name="password" id="password" class="form-control" >
+            </div>
+            <div class="form-group">
+                <label for="name"> Role</label>
+                <input 
+                [(ngModel)]="people.role" type="text"  name="role" id="role" class="form-control" >
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Update" class="btn btn-primary w-100">
+            </div>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
